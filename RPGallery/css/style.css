@@ -1,0 +1,530 @@
+@charset "utf-8";
+
+/* =====================
+共通設定
+======================= */
+
+body {
+    font-family: 'Inter','Noto Sans JP',sans-serif;
+    font-weight: normal;
+    background-color: #F6F3EF;
+}
+
+p {
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #c88f64;
+}
+
+address {
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+
+.wrapper {
+    padding: 0 25px;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__title {
+    font-size: 20px;
+    font-weight: normal;
+    color: #c88f64;
+    padding-left: 10px;
+    border-left: 10px solid #B8CBD6;
+    margin: 10px 0;
+}
+
+.btn {
+    display: block;
+    font-size: 24px;
+    width: 200px;
+    color: #333;
+    background-color: #B8CBD6;
+    padding: 15px 40px;
+    border-radius: 1000px;
+    text-align: center;
+}
+
+/* =====================
+header
+======================= */
+header {
+    background-color: #F6F3EF;
+    height: 100px;
+    
+}
+
+.header__box {
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header__logo {
+    width: 73px;
+}
+
+/* =====================
+humberger
+======================= */
+
+.fa-bars {
+    font-size: 40px;
+    color: #c88f64;
+}
+
+/* =====================
+gnav
+======================= */
+
+.gnav {
+    display: none;
+}
+
+/* =====================
+humberger
+======================= */
+
+  #nav-drawer {
+    position: relative;
+  }
+  
+  /*チェックボックス等は非表示に*/
+  .nav-unshown {
+    display:none;
+  }
+  
+  /*アイコンのスペース*/
+  #nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+  }
+  
+  /*ハンバーガーの形をCSSで表現*/
+  #nav-open span, #nav-open span:before, #nav-open span:after {
+    position: absolute;
+    height: 3px;/*線の太さ*/
+    width: 25px;/*長さ*/
+    border-radius: 3px;
+    background: #555;
+    display: block;
+    content: '';
+    cursor: pointer;
+  }
+  #nav-open span:before {
+    bottom: -8px;
+  }
+  #nav-open span:after {
+    bottom: -16px;
+  }
+  
+  /*閉じる用の薄黒箇所*/
+  #nav-close {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .3s ease-in-out;
+  }
+  
+  /*メニューの中身*/
+  #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 90%;
+    max-width: 330px;/*最大幅（お好みで調整を）*/
+    height: 100%;
+    background: #fff;
+    transition: .3s ease-in-out;
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav__item {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #c88f64;
+    list-style-type: none;
+  }
+
+  .nav__link {
+    display: block;
+ 
+  }
+  
+  /*チェックがついたら表示させる*/
+  #nav-input:checked ~ #nav-close {
+    display: block;
+    opacity: .5;
+  }
+  
+  #nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+  }
+  
+
+/* =====================
+main
+======================= */
+
+main {
+    background-color: #f6f3ef;
+}
+
+/* =====================
+firstview
+======================= */
+.about__firstview {
+    display: none;
+}
+
+.exhivision__firstview {
+    display: none;
+}
+
+.menu__firstview {
+    display: none;
+}
+
+.news__firstview {
+    display: none;
+}
+
+.access__firstview {
+    display: none;
+}
+
+.firstview {
+    position:relative;
+}
+
+.firstview__img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.view__title {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 200px;
+    text-align: center;
+}
+
+/* =====================
+exhivision
+======================= */
+
+.exhivision {
+    padding: 25px 0;
+}
+
+.exhivision p,
+.exhivision a {
+    padding-bottom: 10px;
+}
+
+.exh__img {
+    padding-bottom: 10px;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.exh__link {
+    color: #c88f64;
+    display: inline-block;
+    font-size: 18px;
+}
+
+/* =====================
+news
+======================= */
+
+.news {
+    padding: 25px 0;
+}
+
+.news__item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #000;
+    padding: 10px 0;
+}
+
+/* =====================
+access
+======================= */
+iframe {
+    max-width: 340px;
+    height: 130px;
+}
+
+/* =====================
+footer
+======================= */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #F6F3EF;
+}
+
+.copy {
+    color: #c88f64;
+}
+
+/* =====================
+about
+======================= */
+
+.about__container {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+
+.about__box {
+    width: 100%;
+    
+}
+
+.about__box p,
+.about__box a {
+    margin-bottom: 25px;
+}
+
+.about__box p {
+    margin-top: 25px;
+}
+
+.gallery__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* =====================
+menu
+======================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.menu__box img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* =====================
+news
+======================= */
+
+/* =====================
+access
+======================= */
+
+.access__page iframe {
+    height: 260px;
+}
+
+/* =====================
+pc版
+======================= */
+
+@media (min-width:768px) {
+
+    p {
+        font-size: 16px;
+    }
+
+    .wrapper {
+        max-width: 1000px;
+    }
+
+    /* humberger */
+
+    .hamberger {
+        display: none;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+
+    /* gnav */
+
+    .gnav {
+        display: block;
+    }
+
+    .gnav__list {
+        list-style-type: none;
+        gap: 20px;
+
+    }
+
+    .gnav__item {
+        color: #c88f64;
+    }
+
+    /* exhivision */
+
+    .exhivision {
+        padding: 55px 0;
+    }
+
+    .exhivision__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .exh__img {
+        height: 245px;
+        width: 50%;
+    }
+
+    .exh__link {
+        font-size: 24px;
+    }
+
+    /* news */
+    .news {
+        padding: 55px 0;
+    }
+
+    .news__item {
+        justify-content: start;
+        gap: 65px;
+    }
+
+    /* access */
+    iframe {
+        max-width: 1000px;
+        height: 300px;
+    }
+
+    /* =====about====== */
+
+    .about__wrapper {
+        margin-top: 50px;
+    }
+
+    .about__firstview {
+        display: block;
+    }
+
+    .about__container {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .about__box {
+        width: 40%;
+        
+    }
+    
+    .about__box p,
+    .about__box a {
+        margin-bottom: 50px;
+    }
+    
+    .gallery__img {
+        width: 475px;
+        height:475px;
+        object-fit: cover;
+    }
+
+    /* =====exhivision====== */
+
+    .exhivision__firstview {
+        display: block;
+    }
+
+    .exh__item {
+        border-bottom: 1px dashed #000;
+        padding: 10px 0;
+    }
+
+    /* =====menu====== */
+
+    .menu__firstview {
+        display: block;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+
+    .menu__box {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .menu__box img{
+        width: 300px;
+        height: 300px;
+    }
+
+    /* =====news====== */
+    .news__firstview {
+        display: block;
+    }
+
+    /* =====access====== */
+    .access__firstview {
+        display: block;
+    }
+
+    .access__page iframe{
+        width: 100%;
+        height: 300px;
+    }
+
+}
+
+

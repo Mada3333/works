@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP Gallery - HOME</title>
+    <meta name="description" content="RP Galleryは、「アートとコーヒーで楽しむ私の時間」をコンセプトに掲げるカフェ&amp;ギャラリーです。おいしいコーヒーと感性を刺激するアートに包まれた素敵な時間をお過ごしください。">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cdacc63e86.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="header__box flex">
+                <h1 class="header__logo"><a href="index.html"><img class="header__logo__img" src="img/rpgallery_brown.svg" alt="RP Gallery"></a></h1>
+                <div id="nav-drawer" class="humberger">
+                    <input id="nav-input" type="checkbox" class="nav-unshown">
+                    <label for="nav-input" id="nav-open"><i class="fa-solid fa-bars"></i></label>
+                    <label for="nav-input" id="nav-close" class="nav-unshown"></label>
+                    <div id="nav-content">
+                        <ul class="nav__list flex">
+                            <li class="nav__item"><a href="exhivision.html" class="nav__link">展示情報</a></li>
+                            <li class="nav__item"><a href="news.html" class="nav__link">ニュース</a></li>
+                            <li class="nav__item"><a href="about.html" class="nav__link">ギャラリーについて</a></li>
+                            <li class="nav__item"><a href="menu.html" class="nav__link">カフェメニュー</a></li>
+                            <li class="nav__item"><a href="access.html" class="nav__link">アクセス</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.humberger-->
+                <nav class="gnav">
+                    <ul class="gnav__list flex">
+                        <li class="gnav__item"><a href="exhivision.html" class="gnav__link">展示情報</a></li>
+                        <li class="gnav__item"><a href="news.html" class="gnav__link">ニュース</a></li>
+                        <li class="gnav__item"><a href="about.html" class="gnav__link">ギャラリーについて</a></li>
+                        <li class="gnav__item"><a href="menu.html" class="gnav__link">カフェメニュー</a></li>
+                        <li class="gnav__item"><a href="access.html" class="gnav__link">アクセス</a></li>
+                    </ul>
+                </nav>
+            </div><!--/.flex-->
+        </div><!--/.wrapper-->
+    </header>
+    <main>
+        <div class="firstview exhivision__firstview">
+            <img class="firstview__img" src="img/exh__hero.jpg" alt="">
+            <h2 class="view__title">展示情報</h2>
+        </div><!--/.firstview-->
+        <section class="exhivision">
+            <div class="wrapper">
+                <h3 class="section__title">次回の展示</h3>
+                <div class="exhivision__container">
+                    <img class="exh__img" src="img/noimage.png" alt="増田啓志個展イメージ">
+                    <div class="exh__box">
+                        <p>2023.xx.xx - 2023.xx.xx</p>
+                        <a class="exh__link" href="#">増田啓志個展 HAVE A NICE WEEKEND</a>
+                        <p>時間:10:00 - 17:00</p>
+                    </div>
+                </div><!--/.exhivision__container-->
+                <h3 class="section__title">展示スケジュール</h3>
+                <dl class="exh__list">
+                    <div class="exh__item">
+                        <dt>
+                            <time datetime="2023-05-03">2023.xx.xx - 2023.xx.xx</time>
+                        </dt>
+                        <dd>〇〇〇〇個展　〇〇〇〇</dd>
+                    </div>
+                    <div class="exh__item">
+                        <dt>
+                            <time datetime="2023-05-03">2023.xx.xx - 2023.xx.xx</time>
+                        </dt>
+                        <dd>〇〇〇〇個展　〇〇〇〇</dd>
+                    </div>
+                    <div class="exh__item">
+                        <dt>
+                            <time datetime="2023-05-03">2023.xx.xx - 2023.xx.xx</time>
+                        </dt>
+                        <dd>〇〇〇〇個展　〇〇〇〇</dd>
+                    </div>
+                </dl>
+            </div><!--/.wrapper-->
+        </section>
+        
+    </main>
+    <footer>
+        <p class="copy"><small>&copy;2023 RP Gallery</small></p>
+    </footer>
+</body>
+</html>
